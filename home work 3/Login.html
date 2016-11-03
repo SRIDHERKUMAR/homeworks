@@ -1,0 +1,245 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div
+{
+  padding:10px;
+  border:10px solid yellow;
+  float :center;
+}
+form{
+  text-align: center;
+  margin:auto;
+  border-right: 2px;
+  border-left: 2px;
+  border-top:2px;
+  border-bottom: 2px;
+  border-color: black;
+  display: block;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #483D8B;
+}
+tr  td img
+{
+  width:300px;
+  height:300px;
+}
+.band
+{
+background-color: white;
+margin:auto;
+
+}
+header
+{
+  background-color: skyblue;
+
+}
+h1{
+  text-align: center;
+  text-decoration-color: blue;
+}
+body
+{
+ background-image: url("http://weknowyourdreams.com/images/house/house-08.jpg");
+  background-size: 1366px 768px;
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
+}
+ul li ul {
+    padding: 12px;
+    font-size :12px;
+    cursor:pointer;
+    display:none;
+     visibility: hidden;
+
+    /*position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 230px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    z-index:50000;*/
+}
+
+ul li ul li {
+    background-color:#535353;
+    border-top:1px solid #fff;
+    display: block;
+    font-size:12px;
+    color:#fff;
+}
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.nav_menu_sub {
+    padding:0;
+    margin:0;
+}
+
+.nav_menu_sub ul {
+    margin-top:-7px;
+    display: none !important;
+}
+
+.nav_menu_sub:hover ul {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+footer
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+</style>
+</head>
+<body>
+<h1>House RENTALS</h1>
+
+<ul>
+      <li><a href="C:\Users\sridh\Desktop\homeworks\home work 3\Home.html">Home</a></li>
+
+     <li data-role='dropdown'>
+      <a href="C:\Users\sridh\Desktop\homeworks\home work 3\Rent.html">Rent a Home ￬</a>
+      <ul>
+      <li>
+                <a href="C:\Users\sridh\Desktop\homeworks\home work 3\Used.html">
+                  Used Home
+                </a>
+              </li>
+              <li>
+                <a href="C:\Users\sridh\Desktop\homeworks\home work 3\New.html">
+                  New Home
+                </a>
+              </li>
+      </ul>
+    </li>
+
+    <li data-role='dropdown'>
+      <a href="C:\Users\sridh\Desktop\homeworks\home work 3\Buy.html">Buy a Home￬</a>
+      <ul>
+      <li>
+                <a href="C:\Users\sridh\Desktop\homeworks\home work 3\Used.html">
+                  Used Home
+                </a>
+              </li>
+              <li>
+                <a href="C:\Users\sridh\Desktop\homeworks\home work 3\New.html">
+                  New Home
+                </a>
+              </li>
+      </ul>
+    </li>
+    <li>
+      <a href="C:\Users\sridh\Desktop\homeworks\home work 3\Login.html">Sign In ￬</a>
+    </li>
+    <li data-role='dropdown'>
+      <a href="C:\Users\sridh\Desktop\homeworks\home work 3\About.html">About ￬</a>
+      <ul>
+      <li>
+                <a href='#'>
+                  Who We Are
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  What We Do
+                </a>
+              </li>
+      </ul>
+    </li>
+    <li><a href="C:\Users\sridh\Desktop\homeworks\home work 3\Contact.html">Contact</a></li>
+  </ul>
+
+
+<form action="#" method="get">
+<div id="1">
+
+<h2>Login to  Car Rental Account </h2>
+  Email Id: <input  type="text" name="email"><br><br>
+  password: <input type="password" name="Password"><br><br>
+  <input  type="submit" value="Login">
+   <input name="register" onclick="myFunction()" type="submit" value="Register">
+</div>
+<div id="2" style="display: none;">
+<h2>Create your Car Rental Account </h2>
+  First name: <input type="text" name="fname"><br><br>
+  Last name: <input type="text" name="lname"><br><br>
+  Email Id: <input type="text" name="email"><br><br>
+  password: <input type="password" name="Password"><br><br>
+  confirm password: <input type="password" name="Confirm Password"><br><br>
+<input onclick="loginFunction()" type="submit" value="Login">
+  <input type="submit" value="Register">
+</div>
+</form>
+
+
+
+<footer align="center">
+<p>Copyrights@SridherInc.com Pvt.lt</p>
+</footer>
+<script>
+
+function loginFunction() {
+    document.getElementById("2").style.display = "none";
+}
+function myFunction() {
+    document.getElementById("1").style.display = "none";
+    document.getElementById("2").style.display = "block";
+}
+</script>
+</body>
+
+</html>

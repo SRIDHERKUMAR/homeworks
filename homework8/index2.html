@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<h1>JavaScript Data types</h1>
+</head>
+<body>
+
+<p id="elu"></p>
+<p id="eluk"></p>
+<p id="eluka"></p>
+<p id="elukan"></p>
+
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="demo"></p>
+
+<p id="demos"></p>
+
+
+<h1>JavaScript Loops</h1>
+
+<p id="demoss"></p>
+
+<p id="demosss"></p>
+
+<p>The for/in statement loops through the properties of an object.</p>
+
+<p id="dems"></p>
+
+<h2>JavaScript while</h2>
+
+<p id="demss"></p>
+
+
+<h1>JavaScript do ... while</h1>
+
+<p id="demsss"></p>
+
+
+
+
+<script type="text/javascript">
+var x = 16 + "sri";
+	document.write(x + "<br>");
+var y = 16 + 4 + "sri";
+    document.write(y + "<br>");
+var z = "sri" + 16 + 4;
+    document.write(z + "<br>"); 
+
+ var carName1 = "sri XC60";
+var carName2 = 'Sri XC60';
+var answer1 = "It's alright";
+var answer2 = "He is called 'sridher'";
+var answer3 = 'He is called "sridher"';
+
+document.getElementById("elu").innerHTML =
+carName1 + "<br>" +
+carName2 + "<br>" +
+answer1 + "<br>" +
+answer2 + "<br>" +
+answer3;   
+
+var a = 34.00;
+var b = 34;
+var c = 123e5;
+var d = 123e-5;
+
+document.getElementById("eluk").innerHTML = a + "<br>" + b + "<br>" + c + "<br>" + d
+
+
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("eluka").innerHTML = cars[0] + "<br>" + cars[1] + "<br>" + cars[2];
+
+var person = {
+    firstName : "srikar",
+    lastName  : "Doe",
+    age       : 25,
+    eyeColor  : "brown"
+};
+
+document.getElementById("elukan").innerHTML =
+person.firstName + " is " + person.age + " years old, " + "and he has " + person.eyeColor + " eyes";
+
+document.getElementById("demo").innerHTML =
+typeof "john" + "<br>" +
+typeof 3.14 + "<br>" +
+typeof false + "<br>" +
+typeof [1,2,3,4] + "<br>" +
+typeof {name:'john', age:34};
+
+
+document.getElementById("demos").innerHTML =
+typeof undefined + "<br>" +
+typeof null + "<br>" +
+(null === undefined) + "<br>" +
+(null == undefined);
+
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) {
+    text += cars[i] + "<br>";
+}
+document.getElementById("demoss").innerHTML = text;
+
+var i;
+for (i = 0; i < 10; i++) {
+    document.getElementById("demosss").innerHTML += i + "<br>";
+}
+
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25};
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("dems").innerHTML = txt;
+
+var text = "";
+var i = 0;
+while (i < 10) {
+    text += "<br>The number is " + i;
+    i++;
+}
+document.getElementById("demss").innerHTML = text;
+
+var text = ""
+var i = 0;
+
+do {
+    text += "<br>The number is " + i;
+    i++;
+}
+while (i < 10);
+
+document.getElementById("demsss").innerHTML = text;
+</script>
+
+</body>
+</html>

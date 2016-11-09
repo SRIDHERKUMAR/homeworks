@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>On click event</p>
+<p id="demo"></p>
+
+<button onclick="displayDate()">The time is?</button>
+<p>2> On change event</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+
+</select>
+<p id="myFun"></p>
+
+<h1 id="dmo" onmouseover="mouseOver()" onmouseout="mouseOut()">3> Mouse over and mouse out events</h1>
+
+<p>4> On key down event.</p>
+
+<input type="text" onkeydown="myFunct()">
+
+<body onload="myFuncti()">
+
+<h2>5>Hello World!</h2>
+
+<script>
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("myFun").innerHTML = "You selected: " + x;
+}
+
+function mouseOver() {
+    document.getElementById("dmo").style.color = "red";
+}
+
+function mouseOut() {
+    document.getElementById("dmo").style.color = "black";
+}
+
+function myFunct() {
+    alert("You pressed a key inside the input field");
+}
+
+function myFuncti() {
+    alert("Page is loaded");
+}
+</script>
+
+</body>
+</html>
+

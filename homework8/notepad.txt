@@ -1,0 +1,20 @@
+1> why we use java script?
+
+--> JavaScript allows you to create highly responsive interfaces that improve the user experience and provide dynamic functionality, without having to wait for the server to react and show another page.
+--> Javascript you can validate field-by-field rather than waiting until the user has completely filled out the screen and clicked a submit button. 
+--> JavaScript adds behaviour to the web page where the web page is capable of responding to actions by your visitors without needing to load a new web page in order to process their request.
+
+2> what is dom manipulation?
+
+-->  The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+
+
+
+3> what are events in a web page? how can you recognize them
+
+--> onchange	
+--> onclick	
+--> onmouseover	
+--> onmouseout	
+---> onkeydown	
+-->  onload	

@@ -1,0 +1,150 @@
+1) operational precedence
+2) differences between == and ===
+   differences between != and !==
+
+
+
+1. Operational precedence:
+==============================
+Operators:
+>>>>>>>>>
+there are different type of operators they are:
+1.assignment operators
+=   => to assign a value to specific variable.
+
++=   =>Addition-- it specifies the addition value of two numbers.
+
+-=    =>Substration--it specifies the substraction value of two numbers.
+
+*=    =>Multiplication-- it specifies the multiplication value of two numbers.
+
+/=    =>Division it specifies the dividend value of the two numbers.
+
+**=   =>Exponentiation -- returns power of the given number.
+
+%=    =>Modulus - it specifies the remainder of the given two values.
+
+<<=   =>shift left assignment --- operator shifts to left for number of digits specified.
+
+>>=  =>shift right assignment -- operator shifts  to decimal part  for number of digits specified.
+
+&=  => Bitwise AND assigment --uses binary representation of both operands and does bitwise AND operation.
+^= => Bitwise XOR assignment -- uses binary representation of both operands and does bitwise XOR operation
+
+2.comparison operators
+
+!=  => unequal it checks two operands are unequal or not.
+
+!== => strictly unequal -- it checks whether two operands are unequal or not and it checks with datatypes.
+
+<    =>less than-- operator checks whether the number is less than the given number
+
+<=    =>less than or equal to -- operator checks whether the number is less than or equal to  the given number.
+
+==   =>Equal -- operator checks whether  the number is equal to other number.this is not strict.
+
+=== => strictly equal if they follow:
+two numbers are strictly equal when they are numerically equal,NaN is not equal to anything.It implies for booloean operands and two objects are strictly equal if they refer to same object.
+
+>=   =>Greater than or equal-- operator checks the whether number is greater than or equal to given number.
+
+3.arthmetic operators
+
++    =>Addition-- it specifies the addition value of two numbers.
+
+-    =>Substration--it specifies the substraction value of two numbers.
+
+*    =>Multiplication-- it specifies the multiplication value of two numbers.
+
+/    =>Division it specifies the dividend value of the two numbers.
+
+
+%    =>Modulus - it specifies the remainder of the given two values.
+
+++   =>Increment-- it increment the value by 1
+
+--   =>Decrement-- it decrement the value by 1
+
+**   =>Exponentiation -- returns power of the given number.
+
+-   => negation - it return negative sign of a given number.
+
+4.Bitwise operators
+
+& =>returns 1 if both bits are 1 else returns 0.
+
+| =>returns 1 if either one of the bit is 1 else return 0.
+
+^ => return 0 if both bits are same and returns 1 if both bits are different.
+
+~ => it inverts the bit of operand
+
+<<   =>shift left --- operator shifts to left for number of digits specified.
+
+>>   =>shift right -- operator shifts  to decimal part  for number of digits specified.
+
+>>>  => shifts binary representation bits to right discarding bits shifted off and shifting in zeros from left.
+
+5.Logical operators
+
+&&  => And it compares two operands and returns true if both operands are true otherwise it returns false.
+
+||  => Or it compares two operands and returns true if either one or both operands are true otherwise it returns false.
+
+! expr => returns false if its single operand can be converted to true.otherwise returns true.
+
+6.String operators
+
++ => to concatenate two different strings we use this operator.
+
+7.Conditional operators
+
+?:  => ternary operator for evaluating with three operands we use ternary operator
+   cond ? val1 : val2;
+
+
+8.comma operators
+, => to separate variables and usage of multiple variables we use coma operator.
+
+9.unary operators
+
+operation performed with single operand.
+ x = 10;
+
+10.relational operators
+
+in => in operator returns true if any property or element present in specified object.
+
+other operators:
+
+( )   =>expression grouping -- for performing operations in group.
+
+.    =>member -- represents a member to be accessed.
+
+[]   =>member -- elements in an array.
+
+()   =>function -- used for function with parameters.
+
+new  =>create  -- creates an object for a variable.
+
+typeof => Type -- returns type of element.
+
+
+
+2.differences between == and ===
+====================================
+
+==   =>Equal -- operator checks whether  the number is equal to other number.this is not strict.
+
+=== => strictly equal if they follow:
+two numbers are strictly equal when they are numerically equal,NaN is not equal to anything.It implies for booloean operands and two objects are strictly equal if they refer to same object.
+
+differences between != and !==
+=====================================
+!=  => Not Equal  --operator checks whether the number is not euqal to other number or not if equal then it returns false.It is not strictly typed.
+
+!==  => Strictly Not Equal -- operator checks whether the number is not equal to other number or not with type too if both are not equal then it returns true else it returns false.
+References:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators

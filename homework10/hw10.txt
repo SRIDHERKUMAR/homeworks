@@ -1,0 +1,28 @@
+String Methods:
+
+	--there are many string methods.they are
+	--length --it is used for the finding the length of the string.
+	--reverse -- it is used to reverse the with help of for loop or function or charAt etc..
+	--replace -- it is used for the replace the values in the string.
+	--splice(start,end),substring(start,end),substr(start,length) --it is used to cut the string or to select some part of the string.
+	--indexof --method returns the index of (the position of) the first occurrence of a specified text in a string.
+	--lastindexof --method returns the index of the last occurrence of a specified text in a string.
+	--search --method searches a string for a specified value and returns the position of the match.
+	--A string is converted to upper case with toUpperCase().
+	--A string is converted to lower case with toLowerCase().
+	--Concat --it is used to join two or more strings.
+	--charAt() --method returns the character at a specified index (position) in a string.
+	--split --it is used to convert a string to array.
+
+Array Methods:
+
+	--toString() --converts an array to a string of (comma separated) array values.
+	--pop() --method removes the last element from an array.
+	--push() --method adds a new element to an array (at the end).
+	--shift() --method removes the first array element and shifts all other elements to a lower index.
+	--unshift() --method adds a new element to an array (at the beginning), and "unshifts" older elements.
+	--splice() --method can be used to add new items to an array.
+	--concat() --method creates a new array by concatenating two arrays.
+	--slice() --method slices out a piece of an array into a new array.
+	--sort() --method sorts an array alphabetically.
+	--reverse() --method reverses the elements in an array.

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Concepts</title>
+</head>
+<body bgcolor="skyblue">
+
+	<script>
+	document.write("<h1>STRING METHODS</h1><br>")
+	var name="SRIDHER";
+	console.log(name.length);
+	document.write("<h3>Strings are SRIDHER and KUMAR</h3><br>")
+	document.write("<h4>reverse of SRIDHER is</h4><br>")
+    var str = "SRIDHER";
+    var str1 = "KUMAR"
+    var i;
+    
+    for(i=6;i>=0;i--)
+    
+{
+    var a = str.charAt(i)
+   
+    
+    document.write(a)
+}
+	document.write("<br>")
+	document.write("<h4>concatenation of two strings</h4><br>")
+	var c = str.concat(str1)
+	document.write(c+"<br>")
+	document.write("<h4> SRIDHERKUMAR starts with S and ends with R</h4> <br>")
+	var start = c.startsWith("S")
+	var end = c.endsWith("R")
+	document.write(start+"<br>")
+	document.write(end+"<br>")
+
+	document.write("<h4>sum of ascii values of the string SRIDHER<br></h4>")
+
+	var j,k=0;
+	for(j=0;j<=3;j++)
+{
+	k=k+str.charCodeAt(j)
+}
+	document.write(k+"<br>")
+
+	document.write("<h4>U is included in SRIDHER<br></h4>")
+	var include = str.includes("U")
+	document.write(include)
+
+	document.write("<h4>position of A in KUMAR<br></h4>")
+	var index = str1.indexOf("A")
+	document.write(index)
+
+	document.write("<h4>which string is writen first<br></h4>SRIDHER is written first--- displays -1 <br>if KUMAR written first----displays 1<br>if both are equal displays 0<br>")
+	var compare = str.localeCompare(str1)
+	document.write(compare)
+
+	document.write("<h4>repeating the string SRIDHER 5 times</h4><br>")
+	var rep = str.repeat(5)
+	document.write(rep)
+
+	document.write("<h4>replacing SRIDHER with KUMAR in SRIDHERKUMAR</h4><br>")
+	var replace = c.replace("SRIDHER","KUMAR")
+	document.write(replace)
+
+	document.write("<h4>positions where I is located in SRIDHERKUMAR</h4><br>")
+	var search = c.search("I")
+	document.write(search+",")
+
+	document.write("<h4>selecting a part in SRIDHERKUMAR</h4><br>")
+	var cut = c.slice(3,8)
+	document.write(cut)
+
+	document.write("<h4>splitting the letters in SRIDHERKUMAR</h4><br>")
+	var seperate = c.split("")
+	document.write(seperate)
+
+	document.write("<h4>converting sridherkumar to uppercase</h4><br>")
+	var upper = c.toLocaleUpperCase();
+	document.write(upper)
+
+	document.write("<h4>removed white spaces in a given string</h4><br>")
+	document.write("<h5>given string is --SRIDHER-- </h5>")
+	var d = "  SRIDHER  "
+	var trm = d.trim()
+	document.write(trm)
+
+	document.write("<h4>changing font style of SRIDHERKUMAR</h4><br>")
+	var bld = c.bold()
+	var italic = c.italics()
+	document.write(bld+"<br>")
+	document.write(italic+"<br>")
+	var anc = c.anchor('ngk')
+	document.write(anc)
+</script>
+<script>
+	document.write("<h1>ARRAY METHODS</h1><br>")
+	var arr = ["s","r","i","d","h"]
+
+	document.write("<h4>array elements are <br></h4>")
+    document.write(arr)
+
+    document.write("<h4>copy within<br></h4>")
+    arr.copyWithin(2,1)
+    document.write(arr+"<br>")
+
+    document.write("<h4>sliced elements<br></h4>")
+    arr.slice(2,4)
+    document.write(arr+"<br>")
+
+    document.write("<h4>adding elements at begining <br></h4>")
+    var add = arr.unshift("z","x")
+    document.write(arr+"<br>")
+
+    document.write("<h4>total elements in array <br></h4>")
+    document.write(add+"<br>")
+
+    document.write("<h4>sorting in order<br></h4>")
+    arr.sort()
+    document.write(arr+"<br>")
+
+    document.write("<h4>removing first element<br></h4>")
+    arr.shift()
+    document.write(arr+"<br>")
+
+    document.write("<h4>removing last element<br></h4>")
+     arr.pop()
+    document.write(arr+"<br>")
+
+    document.write("<h4>adding y and v in between<br></h4>")
+     arr.splice(2,0,"y","v")
+    document.write(arr+"<br>")
+
+    document.write("<h4>reversing the order<br></h4>")
+    arr.reverse()
+    document.write(arr+"<br>")
+
+   </script>
+</body>
+</html>

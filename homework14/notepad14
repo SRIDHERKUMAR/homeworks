@@ -1,0 +1,23 @@
+1) selector.addEventListener(eventType, handlerFunction, captureFlag)
+before we go to  event listener we need to learn  about DOM html, DOM animations, DOM css, DOM events
+The easiest way to modify the content of an HTML element is by using the innerHTML property.
+To change the content of an HTML element, use this syntax:
+document.getElementById(id).innerHTML = new HTML
+This example changes the content of a <p> element:
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html>
+2) what is event propagation?
+3) what is event bubling and capturing?
+4) event.stopPropagation?
+5) event.stopImmediatePropagation?

@@ -1,0 +1,148 @@
+1)constructor? and new key word? why do we use it?
+    in javascript we use new keyword to create object as well as to create the constructor. The constructor is used for the reusability of the code.
+    var person = {  
+    person.name : "Diego",  
+    person.getName : function(){  
+        return this.name;  
+    }  
+} 
+In the upper case the function cannot be reusability it just defines modularity. modularity means nothing providing in detail about the function and it's requirements.
+in the below case the code is useful for the reusability of the code so these are advantages of using new keyword.
+var newPerson=function(name){  
+    var result = new Object();  
+    result.name = name;  
+    result.getName = function(){  
+        return this.name;  
+    };  
+    return result;  
+};  
+
+var personOne = newPerson("Diego");  
+var personTwo = newPerson("Gangelo");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personTwo.getName()); // prints Gangelo
+
+2) instanceof?
+    The instanceof operator tests whether an object has in its prototype chain the prototype property of a constructor.
+3) prototype?
+No matter how many objects you create the objects are loaded once in to memory
+allowa you to override the function if required. without use of prototype the code is too long  for functions if we create  100 objects we have to write the function  for 100  objects so it's time taking process so we use prototype.
+without prototype
+  function Person(name){  
+        this.name = name;  
+         };
+        
+var p1 = new Person("Diego"); 
+ p1.getname= function()
+         {
+         return this.name;  
+};   
+var p2 = new Person("sara");  
+document.write("p1.name=" + p1.getname() + <"br">)
+document.write("p2.name=" + p2.getname() + <"br">)
+without prototype here the copies are created it's not a good practice
+  function Person(name){  
+        this.name = name;  
+        p1.getname= function()
+         {
+         return this.name; 
+         };
+        
+var p1 = new Person("Diego"); 
+ p1.getname= function()
+         {
+         return this.name;  
+};   
+var p2 = new Person("sara");  
+document.write("p1.name=" + p1.getname() + <"br">)
+document.write("p2.name=" + p2.getname() + <"br">)
+with prototype
+function Person(name){  
+        this.name = name;  
+         };
+         person.prototype.getname= function()
+         {
+         return this.name;  
+};  
+var p1 = new Person("Diego");  
+var p2 = new Person("sara");  
+document.write("p1.name=" + p1.getname() + <"br">)
+document.write("p2.name=" + p2.getname() + <"br">)
+
+
+4) this key word?
+      in javascriot public fields are created by this keyword. where private fields are created by using var keyword so they are within the localscope of the function.
+      where as privileged methods are created using this keyword and public methods are created using prototype property of the constructor function.
+      privileaged methods can access private variables and methods and they are called by public methods but not private methods. Like public methods , privileged methods are also available outside the constructor function
+5) function hoisting: by default, java script moves all the functions declarations to the to of the current scoe. this is calles functional hoisting. This is the reason javascript functions can be called before they are defined.
+function add(num1, num2)
+{
+	var sum=num1+num2;
+	return sum;
+
+}
+var result= add(10,20);
+document.write(sum);
+ A function is called before defining the function this is called function  hoisting
+ var result= add(10,20);
+document.write(sum); 
+function add(num1, num2)
+{
+	var sum=num1+num2;
+	return sum;
+
+}
+when a function is tyically defined by a variable the function hoidting is not applicable it is valid for only standard function.
+var add= function add(num1, num2)
+{
+	var sum=num1+num2;
+	return sum;
+
+}
+var result= add(10,20);
+document.write(sum);
+the upper case one works but the lower examples does not work for function hoisting.
+var result= add(10,20);
+document.write(result);
+var add= function add(num1, num2)
+{
+	var sum=num1+num2;
+	return sum;
+
+}
+Named function expressions: instead of assigning to the function we are assigning the variable  to the named function because the named function  scope is not available outside the function scope so we are using the variable.
+function computeFactorial(number)
+{
+	if(number<=1)
+	{
+		return 1;
+	}
+	return number*computeFactorial(number-1);
+}
+var result= computeFactorial(5);
+document.write(result)
+
+in the line no 65 we didn't assign the variable to the named function so we will get error  and in the line 8 we are assigning the variable and using the variable outside the scope so we can get hte result.
+
+var factorial = function computeFactorial(number)
+{
+	if(number<=1)
+	{
+		return 1;
+	}
+	return number*computeFactorial(number-1);
+}
+var result=factorial(5);
+document.write(result);
+
+self invoking function expression:
+
+var result = (function computeFactorial(number)
+{
+	if(number<=1)
+	{
+		return 1;
+	}
+	return number*computeFactorial(number-1);
+}(5));
+document.write(result);

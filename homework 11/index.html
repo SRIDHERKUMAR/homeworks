@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object methods</title>
+</head>
+<body>
+<script>
+			var arr = ["hi", "every", "one", "how", "are", "you", "doing", "today"];
+			console.log(Array.isArray(arr));
+			console.log(Array.isArray({}));
+			console.log(arr.length); 
+
+			var arr2 = ["hi", "every", "one", "how", "are", "you", 'hi', "doing", 'hi', "today"];
+		</script>
+<script>
+			var arr = [4,9,16,25,36];
+			arr.forEach(function(item, index, arr){
+				document.writeln ('at index : ' + index + "     we have the item : " + item + '      within the complete array  : ' , arr);
+				document.writeln("<br>");
+			})
+			var arr2 = arr.map(function(item, index, arr){
+			
+				document.writeln('at index : ' + index + "    we have the item : " + item + '      within the complete array  : ' , arr);
+				document.writeln("<br>");
+
+				return item + ' at the index : ' + index; // every item that has been returned is being appeared in the newly created array.
+							}); 
+			var arr3 = [0, true, [1,2,3], function() {return 10;}, {name: 'new name'}, undefined, null];
+			
+		</script>
+<p id="demo8"></p>
+<script >
+	
+	var numbers=[36,49,64,121];
+	function myFunction7() {
+    x = document.getElementById("demo8")
+    x.innerHTML = numbers.map(Math.sqrt);
+}
+</script>
+<p id="demo1"></p>
+<script >
+document.writeln(" object");
+document.writeln("<br>");
+	var person = new Object();  
+person.name = "Diego";  
+person.getName = function(){  
+    return this.name;  
+}; 
+document.getElementById("demo1").innerHTML = person.getName();
+
+</script>
+
+<p id="demo"></p>
+
+<script>
+document.writeln(" literal object") 
+document.writeln("<br>");
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+<script >
+document.writeln(" factory function object") 
+document.writeln("<br>");
+	var newPerson=function(name){  
+    var result = new Object();  // factory
+    result.name = name;  
+    result.getName = function(){  
+        return this.name;  
+    };  
+    return result;  
+};  
+var personOne = newPerson("shekar");  
+var personTwo = newPerson("Gopi");  
+document.writeln(personOne.getName()); 
+document.writeln("<br>");
+document.writeln(personTwo.getName());
+document.writeln("<br>");
+
+</script>
+<script >
+document.writeln(" function  object") 
+document.writeln("<br>");
+	function Person(name){   
+        this.name = name;        // function
+        this.getName = function(){  
+            return this.name;  
+        };  
+};  
+var personOne = new Person("vikram");  
+document.writeln(personOne.getName()); 
+document.writeln("<br>");
+
+</script>
+<script >
+	function Person(){};  
+Person.prototype.name = "Diego";  // prototype
+var personOne = new Person();  
+var personTwo = new Person(); 
+document.writeln("prototype object") 
+document.writeln("<br>"); 
+person.hasOwnProperty('name');
+document.writeln(personOne.constructor == Person); // prints true
+document.writeln("<br>");  
+document.writeln(personOne.name); // prints Diego  
+document.writeln("<br>");
+document.writeln(personTwo.constructor == Person); // prints true
+document.writeln("<br>");  
+document.writeln(personTwo.name); // prints Diego
+document.writeln("<br>");
+</script>
+<script >
+document.writeln(" function prototype object") 
+document.writeln("<br>"); 
+function Person(name){  
+        this.name = name;  // function prototype
+};  
+Person.prototype.getName = function(){  
+            return this.name;  
+        };  
+var personOne = new Person("shekar");  
+var personTwo = new Person("gopi");  
+document.writeln(personOne.getName());   
+document.writeln("<br>");
+document.writeln(personTwo.getName());  
+document.writeln("<br>");
+document.writeln(personOne.getName === personTwo.getName) 
+document.writeln("<br>");
+</script>
+
+</body>
+<br>
+<button onclick="myFunction7()">map method</button>
+</html>

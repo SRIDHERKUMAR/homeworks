@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>mouseover and mouseout events</p>
+<input type="button" value="clickme" id= "btn"  onmouseover="this.style.background='red'; this.style.color='yellow'"onmouseout="this.style.background='black'; this.style.color='red'";>
+<p id="p1">Hello World!</p>
+<h1 id="id1">HOMEWORK14</h1>
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'blue'">
+Click Me!</button>
+
+</div>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+
+</script>
+<body onload="checkCookies()">
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+    var text = "";
+    if (navigator.cookieEnabled == true) {
+        text = "Cookies are enabled.";
+    } else {
+        text = "Cookies are not enabled.";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+</script>
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+<p>The paragraph above was changed by a script.</p>
+
+<div onmouseover="fun1(this)" onmouseout="fun2(this)"  style="background-color:red;width:500px;height:50px; padding:40px;">Mouse Over Me</div>
+
+
+<script>
+function fun1(id2) {
+    id2.innerHTML = "Thank You";
+    document.write("<br>");
+    
+
+function fun2(id3) {
+    id3.innerHTML = "Mouse Over Me"
+   document.write("<br>");
+    
+}
+}
+</script>
+
+<div onmouseup="fun3(this)" onmousedown="fun4(this)"  style="background-color:red width:50px;height:20px; padding:40px;"> when the mouse is triggered mouse down event is happened after the release of mouse down  mouseup events happend!</div>
+<script>
+function fun3(id4) {
+    id4.innerHTML = "hello world";
+}
+
+function fun4(id5) {
+	    id5.innerHTML = "vinod";
+}
+</script>
+<input type="submit" value="submit" id=id6 onclick="return confirmOnsubmit()">
+<script type="text/javascript">
+	function confirmOnsubmit()
+	{
+	if(confirm ("are you sure you want to submit"))
+	{
+		alert("you selected ok");
+		return true;
+	}
+	else
+	{
+		alert("you selected cancel");
+		return false;
+	}
+	}
+</script>
+<table>
+	<tr>
+		<td>
+			Firstname:
+		</td>
+		<td>
+			<input type="text" id="txtFirstname" onkeyup="validateRequiredField('txtFirstname')" onblur="validateRequiredField('txtFirstname')">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Lasttname:
+		</td>
+		<td>
+			<input type="text" id="txtlastname" onkeyup="validateRequiredField('txtlastname')" onblur="validateRequiredField('txtlastname')">
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function validateRequiredField(controlId){
+ var control=document.getElementById(con trolId)
+ control.style.color='white';
+ if(control.value=="")
+ {
+ 	control.style.background='red';
+ }
+ else
+ {
+ 	control.style.background='green';
+ }
+}
+</script>
+</body>
+</html>

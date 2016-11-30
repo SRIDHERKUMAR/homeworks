@@ -1,0 +1,132 @@
+Subject : UIClass-August-24-2016 HomeWork 11 <Name>
+
+1) explain about arr.forEach and arr.map . compare the differences?
+       in arrname.for each method we can check each and every element in the array but in arrname.map creates new array  with results of calling function for every element present in old array.
+2) object and object methods (.hasOwnProperty(item))
+    array is a sub type of object.
+    creating an array is a type of object.
+    object methods are functions and variables are the properties.
+    some methods are length, join,push,pop, reverse etc
+3) diff ways of creating an object
+Object constructor. The simplest way to create an object is to use the Object constructor: 
+var person = new Object();  
+person.name = "Diego";  
+person.getName = function(){  
+    return this.name;  
+}; 
+
+Literal notation. 
+var person = {  
+    person.name : "Diego",  
+    person.getName : function(){  
+        return this.name;  
+    }  
+} 
+
+Factory function.
+The Factory function allows to encapsulate and re-use the logic for creating similar objects. It leverages any of the previous constructs for this. 
+var newPerson=function(name){  
+    var result = new Object();  
+    result.name = name;  
+    result.getName = function(){  
+        return this.name;  
+    };  
+    return result;  
+};  
+var personOne = newPerson("Diego");  
+var personTwo = newPerson("Gangelo");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personTwo.getName()); // prints Gangelo
+
+Function Constructor.
+ In Javascript it is possible to call any function with the new operator in front of it. Given a function F, for new F(): a new empty object X is created. X is set as context for F meaning throughout F this points to X. X is returned as result of F view plainprint?
+
+function Person(name){  
+        this.name = name;  
+        this.getName = function(){  
+            return this.name;  
+        };  
+};  
+var personOne = new Person("Diego");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personOne instanceOf Person); // prints true  
+console.log(personOne.constructor === Person); // prints true  
+console.log(personOne instanceOf Object); // prints true
+
+Prototype.
+In Javascript it is possible to call any function with the new operator in front of it. Given a function F, for new F(): a new empty object X is created. X is set as context for F meaning throughout F this points to X. X is returned as result of F view plainprint?
+
+function Person(name){  
+        this.name = name;  
+        this.getName = function(){  
+            return this.name;  
+        };  
+};  
+var personOne = new Person("Diego");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personOne instanceOf Person); // prints true  
+console.log(personOne.constructor === Person); // prints true  
+console.log(personOne instanceOf Object); // prints true
+
+Function/Prototype combination. 
+function Person(name){  
+        this.name = name;  
+};  
+Person.prototype.getName = function(){  
+            return this.name;  
+        };  
+var personOne = new Person("Diego");  
+var personTwo = new Person("Filippo");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personTwo.getName()); // prints Filippo  
+console.log(personOne.getName === personTwo.getName) //prints true 
+Singleton
+Sometimes, you may want to make sure that only a single instance of a certain class exists. To get a Singleton in Javascript is as simple as defining and invoking the constructor at the same time: view plainprint?
+
+var singleton = new function(){  
+    this.name = "ApplicationName";  
+};  
+4) understand about properties in object. look into about adding property, delete a property, edit property value, check if a property exists?
+ property (key value pair)--> key and value are seperated by :
+	--> key will always be a string 
+	--> properties are seperated by a ,
+	--> values --> can be any java script data types
+
+
+	how to check if a property key(name) exists ?
+		--> objectName.hasOwnProperty('propertyKey')
+			--> if true --> propertyKey exists
+			--> if false --> propertyKey doesnot exist on the object.
+
+	how to add a property ?
+		--> objName.newPropertyKey = "value";
+		--> objName['newPropertyKey'] = "value";
+
+	how to update an existing property value?
+		--> objName.existingPropertyKey = "value";
+		--> objName['existingPropertyKey'] = "value";
+
+	how to read a property value
+		--> objName.existingPropertyKey
+		--> objName['existingPropertyKey']
+
+	how to delete a property value
+		--> delete objName.existingPropertyKey
+		--> delete objName['existingPropertyKey']	
+
+		
+5) what is prototype in object
+In Javascript it is possible to call any function with the new operator in front of it. Given a function F, for new F(): a new empty object X is created. X is set as context for F meaning throughout F this points to X. X is returned as result of F view plainprint?
+
+function Person(name){  
+        this.name = name;  
+        this.getName = function(){  
+            return this.name;  
+        };  
+};  
+var personOne = new Person("Diego");  
+console.log(personOne.getName()); // prints Diego  
+console.log(personOne instanceOf Person); // prints true  
+console.log(personOne.constructor === Person); // prints true  
+console.log(personOne instanceOf Object); // prints true
+

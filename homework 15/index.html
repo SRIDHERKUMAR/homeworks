@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Event Deligation</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("div").delegate("p", "click",function(){
+        $("p").css("background-color", "red");
+    });
+});
+</script>
+
+<script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+    });
+ 
+    $( window ).load(function() {
+        console.log( "window loaded" );
+    });
+    </script>
+</head>
+<body>
+
+<div style="background-color:blue;">
+  <p>This is a paragraph inside a div element.</p>
+</div>
+
+<p>This is a paragraph.</p>
+
+<p>$.ready vs window.onload</p>
+
+<iframe src="http://techcrunch.com"></iframe>
+
+</body>
+</html>

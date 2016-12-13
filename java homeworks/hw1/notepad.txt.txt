@@ -1,0 +1,110 @@
+1.what is a class?
+
+class: Class is nothing but a blueprint or template for creating different objects which defines its proerties and behaviors.
+
+A class can hold objects, methods and variables.
+
+2.what is an object?
+An object is a real world entity and it has a state and behavior, it is an instance of a class.
+
+3.what is a method?
+ A method is  a collection of statements that are grouped together to perform an operation,
+ A method can be invoked by calling method name.
+ Each method can return a value based on the return type of its method.
+
+4.what is an identifier?
+
+ A name in the java program is an identifier, it can be a method name,class name, or label name
+
+ rules of identifier:
+>>>>>>>>>>>>>>>>>>>>
+1.only allowed characters in idetifier are a-z,A-Z,0-9,$,_
+
+2.Identifiers cannot starts with digits.
+
+5. What are reserved words?
+
+reserved words are the keywords in which they are system reserved keywords and cannot be used as identifiers.
+there are 53 reserved keywords :
+
+they are :
+1.datatype keywords:
+>>>>>>>>>>>>>>>>>>...
+byte
+short
+char
+int
+long
+float
+double
+boolean
+
+2.flowcontrol keywords:
+>>>>>>>>>>>>>>>>>>...
+if
+else
+switch
+case
+break
+default
+while
+do
+for
+continue
+return
+3. modifier keywords
+>>>>>>>>>>>>>>>>>>>>>>>
+public
+private
+protected
+static
+final
+abstract
+synchronized
+native
+strictfp
+transient
+volatile
+
+4.Exception handling Keywords:
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+try
+catch
+finally
+throws
+throw
+assert
+
+5.class related keywords:
+>>>>>>>>>>>>>>>>>>>>>
+class
+interface
+extends
+implements
+package
+import
+
+6.Object related keywords:
+>>>>>>>>>>>>>>>>>>>>>>
+new
+instanceof
+super
+this
+
+7.Returntype keywords:
+>>>>>>>>>>>>>>.........
+void
+
+8.Reserved Literals:
+>>>>>>>>..............
+true
+false
+null
+
+9.Group of naming constant:
+>>>>>>>>>>>>>>>>>>>>>>
+enum
+
+
+references:
+https://www.tutorialspoint.com/java/java_methods.htm

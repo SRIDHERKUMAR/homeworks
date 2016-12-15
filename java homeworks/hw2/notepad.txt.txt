@@ -1,0 +1,71 @@
+1) Datatypes in java
+2) write a switch case statement
+3) why we use break in switch case statements
+4) differences between break and continue in a loop?
+
+
+1.Data Types in Java
+>>>>>>>>>>>>>>>>>>>>>>>>>
+there are different datatypes in java
+they are
+1.Nummerical data types
+2. Non Nummerical data types
+
+1. Nummerical datatypes
+    1. Integral data types
+          byte -- 1byte
+          short -- 2 bytes
+          int --- 4 bytes
+          long --- 8 bytes
+
+    2. Floating point data types
+          float -- 4 bytes
+          double -- 8 bytes
+
+ 2.Non Nummerical dataTypes
+          char -- 2 bytes
+     boolean-- size not applicable
+
+2.switch case statement:
+>>>>>>>>>>>>>>>>>>>>>
+
+switch statement can have a number of possible execution paths.switch works with the primitive data types
+if the desired case is not matched in the possibilites then it chooses the default case.
+
+ int week = 7;
+switch(week)
+     {
+      case 1:day = "sunday";
+      break;
+      case 2:day = "Monday";
+      break;
+      case 3:day =  "tuesday";
+      break;
+      case 4:day = "wednesday";
+      break;
+      case 5:day =  "thursday";
+      break;
+      case 6:day =  "Friday";
+      break;
+      case 7:day = "saturday";
+      break;
+      default:day =  "sunday";
+      break;
+
+     }
+
+3.Use of break in switch statement:
+
+Break is generally used to come out of the specific loop or from a given set of condition.
+
+break in switch case can be useful to choose the desire outcome ,if any of the case is true then the break enables the control to come out of the switch case loop with that true case.
+if we doesn't use the break in switch case then if it encounters any true statement case then from that case onwards all the cases to the bottom are printed as output.
+
+4.Difference between Break and continue:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+break :
+if the statement or condition is true then break executes and comes out of the loop regardless of further statements in the loop.
+
+continue:
+if the statement or condition is true then continue executes and skips all the further statements in the loop and executes the loop once again.

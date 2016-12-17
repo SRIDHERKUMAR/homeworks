@@ -1,0 +1,103 @@
+1) pass by value and pass by reference in java.
+2) what are immutable objects? an example of how you can create them?
+3) look into public, private, protected, final, static.
+4) what are getters and setters? how can you implement in your program?
+
+1.
+Pass by reference :
+>>>>>>>>>>>>>>>>>>>>>.
+Pass by reference means the called functions parameter will be same as the callers passed arguments.
+
+Pass by Value :
+>>>>>>>>>>>>>>>
+Pass by value means the called functions parameters will be a copy of the callers passed arguments
+
+java does not use pass by reference infact it uses pass by value
+Java copies and passes the reference by value not the object .
+Java passes everything by value and not by reference here everything means objects,arrays,primitive types so on these are all passed by values in java
+java creates a copy or copies of the values inside a variables and pass that to the method as argument to a method.
+through pass by value every method will receive the copy of the value being stored in the variable rather than the actual variable value.
+
+2.immutable objects:
+>>>>>>>>>>>>>>>>>>>>>>>>
+we create immutable objects inorder to prevent the changes in the values of particular variables and methods of a java class,if immutable they can be only useful for accessing but not for modification.
+ to create a immutable objects we need to follow some rules
+
+Example: string objects are immutable
+once string object is created its data or state can't be changed but a new string object is created
+
+ immutable class :
+ >>inorder to make a class immutable we should declare it as final class to prevent any other classes to extend this class and final class in java cannot be overridden.
+>> make instance variables as final
+>> no setter methods for instance variables
+>> they can have getter methods.
+>> only mutable objects have both getter and setter methods.
+
+3.modifiers:
+
+in java we have to types of modifiers they are
+1.Access Control Modifiers
+2.Non-Access Modifiers
+
+1. Access Control Modifiers
+they are
+1. public
+visible to all in real world entity, it can be accessed by any package, any class.
+
+2.private
+it is visible to the class only
+
+3.protected
+it is visible to the package and all its sub classes
+
+4.default
+it is visible to the package
+
+2.Non-Access Modifiers
+
+1.static
+for creating class methods and variables
+
+2.final
+we use final to finalize the implementation of methods,classes and variables.
+if we write final keyword we cannot change the variable,method or class again
+
+3.abstract
+for creating abstract classes or abstract method we use abstract.
+here abstract can be used to declare a method without defination.
+
+4.synchronized
+synchronized is a modifier used in threads,to access one thread at a time we use synchronized block or methods.
+
+4)
+Getter and setter
+>>>>>>>>>>>>>>>>
+in encapsulation to access a private method or a variable we use getter and setter methods
+
+getter() method
+++++++++++++++++
+>> getter method should be public
+>> the return type should not be void
+>> method name should be prefix with get
+>> they should not take any arguments
+
+ex: public string getName()
+     {
+     return name;
+     }
+
+setter() method
++++++++++++++++
+>> setter method should be public method
+>> the return type should be void
+>> method name should be prefix  with set
+>> they should take some arguments i.e it should not be as no-argument method
+
+ex: public void setName(String name)
+    {
+    this.name = name;
+    }
+
+References:
+https://www.tutorialspoint.com/java/java_access_modifiers.htm
+http://www.javatpoint.com/access-modifiers

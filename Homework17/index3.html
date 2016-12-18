@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+<script>
+    
+
+	$.ajax({
+		url : 'http://rest.learncode.academy/api/johnbob/friends/58536abf4c920201009b6fa0',
+		method : 'DELETE',
+
+		success : function(data) {
+			console.log(data);
+		},
+
+		error : function(xhr){
+			console.log(xhr)
+		}
+	})
+</script>
+
+</body>
+</html>

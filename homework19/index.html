@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+ <div ng-app="myApp">
+ 	
+ 	<div ng-controller="FirstCtrl">
+ 		my firstname is: {{firstName}} <br/>
+ 		click me alert: <button ng-click="func1()">Click Me!!</button>
+ 	</div>
+ </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<script>
+	angular.module('myApp',[]);
+	angular.module('myApp').controller('FirstCtrl', ['$scope', function($scope){
+		$scope.firstName='Java Script';
+		$scope.func1=function(){
+			alert('you clicked on the button')
+		}
+	}])
+
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> controllers and nested controllers
+	<title></title>
+</head>
+<body>
+
+ <div ng-app="myApp">
+ 	
+ 	<div ng-controller="FirstCtrl">
+ 		my firstname is: {{firstName}} <br/>
+ 	</div>
+ 	<div ng-controller="SecondCtrl">
+ 		my firstname is: {{firstName}} <br/>
+ 		<div ng-controller="ThirdCtrl">
+ 		my lastname is: {{lastName}} <br/>
+ 	</div>
+ 	</div>
+ </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<script>
+	angular.module('myApp',[]);
+	angular.module('myApp').controller('FirstCtrl', ['$scope', function($scope){
+		$scope.firstName='Java Script';
+			
+	}])
+	angular.module('myApp').controller('SecondCtrl', ['$scope', function($scope){
+		$scope.firstName='Java Script';
+		
+			
+	}])
+	angular.module('myApp').controller('ThirdCtrl', ['$scope', function($scope){
+		$scope.lastName='Java';
+			
+	}])
+
+	
+</script>
+
+</body>
+</html>

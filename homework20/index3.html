@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div ng-app="myApp">
+<div ng-controller="FirstCtrl">
+
+Enter first name : <input ng-model="firstName"> </br>
+Enter last name : <input ng-model="lastName">
+
+<dir1 attr2="firstName" attr3="eat()"></dir1>
+<dir1 attr2="lastName" attr3="sleep()"></dir1>
+
+	
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+	
+	angular.module('myApp',[])
+	angular.module('myApp').controller('FirstCtrl', ['$scope', function($scope){
+
+		$scope.eat= function(){
+			alert("im eating")
+		}
+		$scope.sleep= function(){
+			alert("im sleeping")
+		}
+		$scope.drink= function(){
+			alert("im drinking")
+		}
+		
+	}]);
+	angular.module('myApp').directive('dir1', function(){
+
+		return {
+
+              restrict : 'E',
+              template : '<div> The attr2 is : {{attr2}}. <button ng-click="attr3()"> click me !! </button></div>',
+              scope : {
+              	attr2 : '=',
+              	attr3 : '&' 
+              }
+				
+			}
+		
+	})
+</script>
+</body>
+</html>

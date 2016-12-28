@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div ng-app="myApp">
+<div ng-controller="FirstCtrl">
+the first name : {{firstName}}, </br>
+the first in upper case name : {{firstName | uppercase}},</br>
+the first in lower case name : {{firstName | lowercase}}
+	
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+	
+	angular.module('myApp',[])
+	angular.module('myApp').controller('FirstCtrl', ['$scope', function($scope){
+		$scope.firstName="java script"
+	}]);
+	
+
+</script>
+</body>
+</html>

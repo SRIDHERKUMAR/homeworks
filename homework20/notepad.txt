@@ -1,0 +1,9 @@
+Shared and Inherited Scope
+
+Shared scope and inherited scope are relatively easier to understand. In a shared scope, directives share the scope with the enclosed controller.
+
+In Isolated scope, the directive does not share a scope with the controller; both directive and controller have their own scope. However, data can be passed to the directive scope in three possible ways.
+
+1.       Data can be passed as a string using the @ string literal
+2.       Data can be passed as an object using the = string literal
+3.       Data can be passed as a function the & string literal

@@ -1,0 +1,30 @@
+Single ton:
+A service is registered using the service() function of angular.module() . The second argument to service() is a constructor function. When we ask for the service as a dependency, AngularJS creates an object from this constructor function and injects it. A service is a singleton.
+
+
+The difference between factory and service is just like the difference between a function and an object
+
+Factory Provider
+
+Gives us the function's return value ie. You just create an object, add properties to it, then return that same object.When you pass this service into your controller, those properties on the object will now be available in that controller through your factory. (Hypothetical Scenario)
+Singleton and will only be created once
+Reusable components
+Factory are a great way for communicating between controllers like sharing data.
+Can use other dependencies
+Usually used when the service instance requires complex creation logic
+Cannot be injected in .config() function.
+Used for non configurable services
+If you're using an object, you could use the factory provider.
+Syntax: module.factory('factoryName', function);
+Service Provider
+
+Gives us the instance of a function (object)- You just instantiated with the ‘new’ keyword and you’ll add properties to ‘this’ and the service will return ‘this’.When you pass the service into your controller, those properties on ‘this’ will now be available on that controller through your service. (Hypothetical Scenario)
+Singleton and will only be created once
+Reusable components
+Services are used for communication between controllers to share data
+You can add properties and functions to a service object by using the this keyword
+Dependencies are injected as constructor arguments
+Used for simple creation logic
+Cannot be injected in .config() function.
+If you're using a class you could use the service provider
+Syntax: module.service(‘serviceName’, function);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      <div ng-app="myApp">
+      	
+       <div ng-controller="FirstCtrl"></div>
+       <div ng-controller="SecondCtrl"></div>
+
+
+
+
+      </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+	angular.module('myApp',[]);
+	angular.module('myApp').controller('FirstCtrl', ['$scope','fac1', function($scope,fac1){
+		console.log('my first name is:' + fac1.firstname + '. my lastname is :'+ fac1.lastname);
+		fac1.firstname='my first name changed';
+		
+	}])
+
+	angular.module('myApp').controller('SecondCtrl', ['$scope', 'fac1', function($scope,fac1){
+		console.log('my first name is:' + fac1.firstname + '. my lastname is :'+ fac1.lastname);
+		
+	}])
+
+	angular.module('myApp').factory('fac1', function(){
+
+		return {
+			firstname : 'john',
+			lastname : 'bob'
+		}
+	})
+
+</script>
+</body>
+</html>

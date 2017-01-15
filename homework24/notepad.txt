@@ -3,3 +3,4 @@ Promise.prototype.then():
 The then() method returns a Promise. It takes up to two arguments: callback functions for the success and failure cases of the Promise.
 
 Note: If both arguments are omitted, or are provided non-functions, a new Promise is created with no additional handlers, simply adopting the final state of the Promise that then is called on. If the first argument is omitted or provided a non-function, the new Promise that is created simply adopts the fulfillment state of the Promise that then is called on (if it becomes fulfilled). If the second argument is omitted or provided a non-function, the new Promise that is created simply adopts the rejection state of the Promise that then is called on (if it becomes rejected).
+

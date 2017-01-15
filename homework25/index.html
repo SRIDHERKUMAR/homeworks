@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div ng-app="myApp">
+			
+			<a href="#/">Home</a> |
+			<a ui-sref="firstMessage()">main</a> |
+			<a href="#/second-msg">second</a>
+			<div ui-view></div>
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+		<script>
+			angular.module('myApp', ['ui.router'])
+			angular.module('myApp').config(['$stateProvider',function($stateProvider) {
+				$stateProvider
+				.state('firstMessage',{
+					url : '/first-msg',
+					template: '<h1>{{name}}</h1>',
+					controller:'msg1'
+				})
+				.state('secondMessage',{
+					url : '/second-msg',
+					template: '<h1>{{age}}</h1>',
+					controller:'msg2'
+				})
+				.state('root',{
+					url:'/',
+					template:'<strong> you are at root.. click something else</strong>'
+
+				})
+				.state('noroute',{
+					url:'*path',
+					template:'<strong> your router is not found.. click something else</strong>'
+
+				});
+					
+			}]);
+
+			angular.module('myApp').controller('msg1', ['$scope', function($scope){
+				$scope.name="tis is sriher"
+				
+			}])
+			angular.module('myApp').controller('msg2', ['$scope', function($scope){
+				$scope.age="age is 23"
+				
+			}]);
+		</script>
+	</body>
+</html>

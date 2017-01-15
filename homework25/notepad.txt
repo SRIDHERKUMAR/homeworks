@@ -1,0 +1,3 @@
+Why use Nodejs?
+If your server side code requires very few cpu cycles. In other world you are doing non blocking operation and does not have heavy algorithm/Job which consumes lots of CPU cycles.
+If you are from Javascript back ground and comfortable in writing Single Threaded code just like client side JS.
